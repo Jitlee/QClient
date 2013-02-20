@@ -6,6 +6,9 @@ using System.Windows;
 
 namespace QClient.Core.Util
 {
+    /// <summary>
+    /// 通用帮助类
+    /// </summary>
     internal static class Common
     {
         public readonly static string ApplicationDataPath = Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.ApplicationData), "QClient");

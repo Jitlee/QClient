@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
+﻿
+using System;
 using System.Windows.Input;
 
-namespace QClient.Core.Model
+namespace QClinet.Core
 {
-    internal class DelegateCommandBase : ICommand
+    /// <summary>
+    /// Command 实体基类
+    /// </summary>
+    public class DelegateCommandBase : ICommand
     {
         private readonly Predicate<object> _canExecute;
         private readonly Action<object> _execute;
@@ -18,7 +19,8 @@ namespace QClient.Core.Model
             _execute = execute;
         }
 
-        public DelegateCommandBase(Action<object> execute, Predicate<object> canExecute)
+        public DelegateCommandBase(Action<object> execute,
+                       Predicate<object> canExecute)
         {
             _execute = execute;
             _canExecute = canExecute;
@@ -46,12 +48,16 @@ namespace QClient.Core.Model
         }
     }
 
-    internal class DelegateCommand<T> : DelegateCommandBase
+    /// <summary>
+    /// Command 实体类
+    /// </summary>
+    /// <typeparam name="T">Command 参数类型</typeparam>
+    public class DelegateCommand<T> : DelegateCommandBase
     {
         public DelegateCommand(Action<T> execute) :
             base(new Action<object>(o =>
             {
-                if (null != execute)
+                if (null != execute && o is T)
                 {
                     execute((T)o);
                 }
@@ -60,7 +66,7 @@ namespace QClient.Core.Model
         public DelegateCommand(Action<T> execute, Func<T, bool> canExecuteMethod) :
             base(new Action<object>(o =>
             {
-                if (null != execute)
+                if (null != execute && o is T)
                 {
                     execute((T)o);
                 }
@@ -76,7 +82,7 @@ namespace QClient.Core.Model
         public DelegateCommand(Action<T> execute, Func<bool> canExecuteMethod) :
             base(new Action<object>(o =>
             {
-                if (null != execute)
+                if (null != execute && o is T)
                 {
                     execute((T)o);
                 }
@@ -90,7 +96,10 @@ namespace QClient.Core.Model
             })) { }
     }
 
-    internal class DelegateCommand : DelegateCommandBase
+    /// <summary>
+    /// Command 实体类
+    /// </summary>
+    public class DelegateCommand : DelegateCommandBase
     {
         public DelegateCommand(Action execute) :
             base(new Action<object>(o =>
