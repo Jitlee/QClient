@@ -1,0 +1,13 @@
+E:\Works\QClient\QClient\bin\Debug\QClient.exe
+E:\Works\QClient\QClient\bin\Debug\QClient.pdb
+E:\Works\QClient\QClient\obj\x86\Debug\ResolveAssemblyReference.cache
+E:\Works\QClient\QClient\obj\x86\Debug\MainWindow.baml
+E:\Works\QClient\QClient\obj\x86\Debug\MainWindow.g.cs
+E:\Works\QClient\QClient\obj\x86\Debug\App.g.cs
+E:\Works\QClient\QClient\obj\x86\Debug\QClient_MarkupCompile.cache
+E:\Works\QClient\QClient\obj\x86\Debug\QClient.g.resources
+E:\Works\QClient\QClient\obj\x86\Debug\QClient.Properties.Resources.resources
+E:\Works\QClient\QClient\obj\x86\Debug\GenerateResource.read.1.tlog
+E:\Works\QClient\QClient\obj\x86\Debug\GenerateResource.write.1.tlog
+E:\Works\QClient\QClient\obj\x86\Debug\QClient.exe
+E:\Works\QClient\QClient\obj\x86\Debug\QClient.pdb
